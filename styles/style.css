@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -63,7 +64,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   min-inline-size: 711px;
 }
 
@@ -88,7 +89,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -103,8 +104,12 @@ ol {
   inline-size: fit-content;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
+}
+
+.search-form__label:active .search-form__label-text {
+  text-decoration: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -117,7 +122,7 @@ ol {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   color: rgb(255 255 255 / 0.7);
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -125,6 +130,7 @@ ol {
   background-color: transparent;
   appearance: none;
   min-inline-size: 225px;
+  min-block-size: 27px;
 }
 
 .search-form__textfield:focus {
@@ -140,8 +146,8 @@ ol {
 .search-form__pseudo-checkbox {
   display: inline-flex;
   align-items: center;
-  outline: 1px solid #fff;
   vertical-align: middle;
+  outline: 1px solid #fff;
   inline-size: 19px;
   block-size: 19px;
 }
@@ -167,7 +173,7 @@ ol {
   gap: 10px;
   border: 1px solid #fff;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -183,6 +189,7 @@ ol {
 }
 
 .button:active {
+  text-decoration: none;
   background-color: #545050;
 }
 
@@ -197,7 +204,7 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  inline-size: 194px;
+  min-inline-size: 194px;
 }
 
 .content__details {
@@ -206,14 +213,15 @@ ol {
   gap: 26px;
   align-self: flex-start;
   inline-size: 100%;
-  block-size: 100%;
+  min-block-size: 534px;
+  min-inline-size: 399px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 70.5px;
+  line-height: 94%;
   text-transform: uppercase;
 }
 
@@ -242,20 +250,21 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__card-link:hover {
   text-decoration: underline;
 }
 
 .content__card-link:focus {
   outline: none;
+  text-decoration: none;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-}
-
-.content__card-link_current {
-  background-color: #545050;
 }
 
 .content__video-card {
@@ -271,16 +280,16 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  line-height: 30px;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
