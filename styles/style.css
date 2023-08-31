@@ -274,8 +274,11 @@ ol {
 
 .content__video-card-description-container {
   display: grid;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   gap: 6px;
-  inline-size: 100%;
+  flex-grow: 1;
   block-size: 100%;
 }
 
